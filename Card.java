@@ -1,5 +1,4 @@
 public class Card {
-
     private String rank;
     private String suit;
 
@@ -13,4 +12,3 @@ public class Card {
         return rank + " of " + suit;
     }
 }
-
