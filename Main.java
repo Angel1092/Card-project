@@ -1,12 +1,15 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Main {
-
     public static void main(String[] args) {
+        Deck deck = new Deck();       // create a deck
+        deck.shuffle();               // shuffle it
 
-        ArrayList<Card> deck = createDeck();
+        ArrayList<ArrayList<Card>> hands = deck.dealHands(5, 5); // deal 5 hands, 5 cards each
 
-        Collections.shuffle(deck);
-
-        ArrayList<ArrayList<Card>> hands = dealHands(deck, 5, 5);
+        // Print each hand
+        for (int i = 0; i < hands.size(); i++) {
+            System.out.println("Player " + (i + 1) + ": " + hands.get(i));
+        }
+    }
+}
