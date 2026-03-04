@@ -24,20 +24,7 @@ public class Deck {
     public Card drawCard() {
         if (!cards.isEmpty()) {
             return cards.remove(0);
-        } else {
-            return null;
         }
-    }
-
-    public ArrayList<ArrayList<Card>> dealHands(int numHands, int cardsPerHand) {
-        ArrayList<ArrayList<Card>> hands = new ArrayList<>();
-        for (int i = 0; i < numHands; i++) {
-            ArrayList<Card> hand = new ArrayList<>();
-            for (int j = 0; j < cardsPerHand; j++) {
-                hand.add(drawCard());
-            }
-            hands.add(hand);
-        }
-        return hands;
+        return null;
     }
 }
